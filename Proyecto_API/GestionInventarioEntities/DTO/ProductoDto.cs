@@ -21,9 +21,9 @@ namespace GestionInventarioEntities.DTO
 
         [Range(0, int.MaxValue, ErrorMessage = "Las existencias del producto deben ser mayor o igual a 0")]
         [Required(ErrorMessage = "El campo existencias del producto es requerido")]
-        public int Stock { get; set; } = 0;
+        public int StockProducto { get; set; } = 0;
 
         [Required]
-        public string? CodigoCategoria { get; set; } = string.Empty;
+        public string? CodigoCategoriaProducto { get; set; } = string.Empty;
     }
 }
