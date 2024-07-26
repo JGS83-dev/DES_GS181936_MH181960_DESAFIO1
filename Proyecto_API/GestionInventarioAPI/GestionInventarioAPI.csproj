@@ -11,7 +11,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\GestionInventarioBL\GestionInventarioBL.csproj" />
     <ProjectReference Include="..\GestionInventarioCommon\GestionInventarioCommon.csproj" />
+    <ProjectReference Include="..\GestionInventarioEntities\GestionInventarioEntities.csproj" />
   </ItemGroup>
 
 </Project>
