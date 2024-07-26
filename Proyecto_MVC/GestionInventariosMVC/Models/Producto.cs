@@ -14,7 +14,7 @@ namespace GestionInventariosMVC.Models
         public string Nombre { get; set; }
 
         [Display(Name = "Descripción Producto")]
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
         [Range(1, double.MaxValue, ErrorMessage = "El precio del producto debe ser mayor a 0")]
@@ -32,6 +32,6 @@ namespace GestionInventariosMVC.Models
         [Display(Name = "Categoria")]
         public string? CodigoCategoria { get; set; }
 
-        public Categoria Categoria { get; set; }
+        public Categoria? Categoria { get; set; }
     }
 }

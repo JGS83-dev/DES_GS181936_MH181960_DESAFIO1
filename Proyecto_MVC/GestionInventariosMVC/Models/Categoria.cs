@@ -13,8 +13,8 @@ namespace GestionInventariosMVC.Models
         public string Nombre { get; set; }
 
         [Display(Name = "Descripción Categoria")]
-        public string Descripcion { get; set; }
+        public string? Descripcion { get; set; }
 
-        public ICollection<Producto> Producto { get; set; }
+        public ICollection<Producto>? Producto { get; set; }
     }
 }

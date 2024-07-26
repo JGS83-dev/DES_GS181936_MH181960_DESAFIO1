@@ -55,6 +55,7 @@ namespace GestionInventariosMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Codigo,Nombre,Descripcion")] Categoria categoria)
         {
+            ModelState.Remove("Producto");
             if (ModelState.IsValid)
             {
                 _context.Add(categoria);
@@ -87,6 +88,7 @@ namespace GestionInventariosMVC.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(string id, [Bind("Codigo,Nombre,Descripcion")] Categoria categoria)
         {
+            ModelState.Remove("Producto");
             if (id != categoria.Codigo)
             {
                 return NotFound();
