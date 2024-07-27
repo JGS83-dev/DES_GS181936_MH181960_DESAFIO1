@@ -12,7 +12,7 @@ builder.Services.AddSwaggerGen();
 
 builder.Services.AddServiceConnector();
 
-builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("DefaultCN"));
+builder.Services.Configure<AppSettings>(builder.Configuration.GetSection("AppSettings"));
 
 var app = builder.Build();
 

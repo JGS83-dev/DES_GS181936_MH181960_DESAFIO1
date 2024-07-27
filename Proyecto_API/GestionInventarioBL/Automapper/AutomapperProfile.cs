@@ -14,12 +14,8 @@ namespace GestionInventarioBL.Automapper
         public AutomapperProfile() 
         { 
             CreateMap<Producto, ProductoDto>()
-                .ForMember(destination => destination.CodigoProducto, options => options.MapFrom(source => source.Codigo))
-                .ForMember(destination => destination.NombreProducto, options => options.MapFrom(source => source.Nombre))
-                .ForMember(destination => destination.DescripcionProducto, options => options.MapFrom(source => source.Descripcion))
-                .ForMember(destination => destination.PrecioProducto, options => options.MapFrom(source => source.Precio))
-                .ForMember(destination => destination.StockProducto, options => options.MapFrom(source => source.Stock))
-                .ForMember(destination => destination.CodigoCategoriaProducto, options => options.MapFrom(source => source.CodigoCategoria))
+                .ForMember(destination => destination.CodigoProducto, options => options.MapFrom(source => source.Codigo))                
+                .ForMember(destination => destination.StockProducto, options => options.MapFrom(source => source.Stock))               
                 .ReverseMap();
         }
     }
