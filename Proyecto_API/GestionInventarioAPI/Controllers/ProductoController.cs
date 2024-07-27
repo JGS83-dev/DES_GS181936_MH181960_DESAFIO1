@@ -22,10 +22,10 @@ namespace GestionInventarioAPI.Controllers
             this.service = service;
         }
 
-        [HttpPut("{id}")]
+        [HttpPost]
         [ProducesResponseType(typeof(ProductoDto), (int) HttpStatusCode.OK)]
         [ProducesResponseType((int)HttpStatusCode.BadRequest)]
-        public async Task<IActionResult> Put(int id, ProductoDto model)
+        public async Task<IActionResult> UpdateStock(ProductoDto model)
         {
             if (model == null)
             {
